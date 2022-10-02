@@ -31,7 +31,7 @@ int main() {
     int size_array = 30 ;
     // cin >> size_array;
     int k = 0;
-    int *sorted_array = new int [size_array]; // Указатель на масст
+    int *sorted_array = new int [size_array]; // Указатель на масс
     // Рандом
     print();
     for (int i = 0; i < size_array; i++)

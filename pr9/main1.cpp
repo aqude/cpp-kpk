@@ -16,11 +16,11 @@ int main() {
     vector <int> arr(10);
     for (int i = 0; i < link_n; i++)
     {
-        arr[i] = random(1, 100);
+        arr[i] = random(-100, 100);
     }
     
     for (int i = 0; i < link_n; i++)
-        if (arr[i]%2 == 0)
+        if (arr[i] < 0)
         {
             for (int j = i; j > k; j--)  
             swap(arr[j],arr[j-1]);

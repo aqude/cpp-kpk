@@ -36,17 +36,16 @@ int main() {
     print();
     for (int i = 0; i < size_array; i++)
     {
-        sorted_array[i] = random(1, 30);
+        sorted_array[i] = random(-10, 30);
         cout << setw(2) << sorted_array[i] << "  ";
     }
-    
     for (int i = 0; i < size_array; i++)
     {
-        if (sorted_array[i] > 5) {
+        if (sorted_array[i] > 0)
+        {
             insertionSort(sorted_array, size_array);
         }
     }
-     // Вызов функции
     print();
     for (int i = 0; i < size_array; i++)  {
         cout << setw(2) << sorted_array[i] << "  ";
