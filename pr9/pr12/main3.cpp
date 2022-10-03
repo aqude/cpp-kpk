@@ -1,25 +1,13 @@
 #include <iostream>
 using namespace std;
-int ** Create( size_t n, size_t m ) {
-    int ** M = new int * [n];
-    for ( size_t i = 0; i < n; ++i ) {
-        M[i] = new int [m];
-    }
-    return M;
-}
-void Free( int ** M, size_t n ) {
-    for ( size_t i = 0; i < n; ++i ) {
-        delete [] M[i];
-    }
-    delete [] M;
-}
+
 int random(int min, int max) {
     return min + rand() % (min - max + min + 1);
 }
 
 int main() {
   const int size = 7;
-  int ** arr = Create(7, 7);
+  int arr[size][size];
   int min = arr[0][0];
   for (int i = 0; i < size; i++) {
     for (int j = 0; j < size; j++) {
@@ -39,7 +27,7 @@ int main() {
       {
         arr[i][j] = 0;
       } else {
-        arr[i][j]= random(2, 111);
+        arr[i][j]= random(2, 9);
       }
         cout << arr[i][j] << " ";
       }
@@ -58,7 +46,9 @@ int main() {
     }
 
     cout << "Min = " << min << endl;
-    // Free(arr, size);
-
+    for (int i = 0; i < size; i++) {
+      delete[] arr[i];
+    }
+    delete[] arr;
     return 0;
 }

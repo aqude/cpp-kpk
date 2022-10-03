@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
-using namespace std; 
+using namespace std;
 int counter = 0;
-void print() {   
-    cout << endl << " === " << counter++ << " === " << endl; 
+void print() {
+    cout << endl << " === " << counter++ << " === " << endl;
 }
 int random(int min, int max) {
     return min + rand() % (min - max + min + 1);
@@ -39,7 +39,7 @@ int main() {
         sorted_array[i] = random(1, 30);
         cout << setw(2) << sorted_array[i] << "  ";
     }
-    
+
     for (int i = 0; i < size_array; i++)
     {
         if (sorted_array[i] > 5) {
@@ -50,7 +50,7 @@ int main() {
     print();
     for (int i = 0; i < size_array; i++)  {
         cout << setw(2) << sorted_array[i] << "  ";
-    }      
+    }
     delete [] sorted_array;
     return 0;
 }

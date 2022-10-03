@@ -9,7 +9,7 @@ int main() {
   int array[22];
   for (int i = 0; i < sizeI; i++) {
     for (int j = 0; j < sizeJ; j++) {
-      arr[i][j] = 1 + rand() % (50 - 1 + 1);
+      arr[i][j] = 1 + rand() % (40 - 1 + 1);
       cout << arr[i][j] << " ";
     }
     cout << endl;
