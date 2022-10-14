@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
-using namespace std; 
+using namespace std;
 int counter = 0;
-void print() {   
-    cout << endl << " === " << counter++ << " === " << endl; 
+void print() {
+    cout << endl << " === " << counter++ << " === " << endl;
 }
 int random(int min, int max) {
     return min + rand() % (min - max + min + 1);
@@ -26,12 +26,12 @@ int main() {
     }
     print();
     int size = n;
-    
+
     for (int i = 0; i < size; i++)
         for (int j = 0; j < size; j++)
             if (arr[i][j] % 2 != 0)
             {
-                arr[i][j] = 0;    
+                arr[i][j] = 0;
             }
     // перенести нули в конец матрицы
     for (int i = 0; i < size; i++)

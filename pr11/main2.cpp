@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
-using namespace std; 
+using namespace std;
 int counter = 0;
-void print() {   
-    cout << endl << " === " << counter++ << " === " << endl; 
+void print() {
+    cout << endl << " === " << counter++ << " === " << endl;
 }
 int random(int min, int max) {
     return min + rand() % (min - max + min + 1);

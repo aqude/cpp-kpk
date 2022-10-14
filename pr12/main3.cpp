@@ -40,6 +40,10 @@ int main() {
         arr[i][j] = 0;
       } else {
         arr[i][j]= random(2, 111);
+        if (arr[i][j] < min && arr[i][j])
+        {
+          min = arr[i][j];
+        }
       }
         cout << arr[i][j] << " ";
       }
@@ -50,15 +54,15 @@ int main() {
     {
       for (int j = 0; j < size; j++)
       {
-        if (arr[i][j] < min && arr[i][j] != 0)
-        {
-          min = arr[i][j];
-        }
+        // if (arr[i][j] < min && arr[i][j] != 0)
+        // {
+        //   min = arr[i][j];
+        // }
       }
     }
 
     cout << "Min = " << min << endl;
-    // Free(arr, size);
+    Free(arr, size);
 
     return 0;
 }
